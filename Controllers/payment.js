@@ -2,8 +2,6 @@ const router = require("express").Router();
 const Razorpay = require("razorpay");
 const crypto = require("crypto");
 
-//KEY_ID = "rzp_test_cUyJdM5W6uhCS7"
-//KEY_SECRET = "Vl5gHMdmuDhe8jla1ZGn9bGF"
 
 router.post("/orders", async(req, res) => {
     try{

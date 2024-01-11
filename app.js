@@ -32,7 +32,7 @@ app.use('/', routes);                       // If any requests are made it redir
 app.use('/api/payment', paymentRoutes);    // If any payment requests are made it redirects to paymentRoutes.
 app.use('/auth', authRoute);                // If any social media authentication requests are made it redirects to authRoute.
 
-const port = 5500;
+const port = process.env.PORT || 5500;
 const hostname = 'localhost';
 
 const monUser = process.env.MONGO_USER
