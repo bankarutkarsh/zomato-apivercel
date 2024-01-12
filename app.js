@@ -33,14 +33,11 @@ app.use('/api/payment', paymentRoutes);    // If any payment requests are made i
 app.use('/auth', authRoute);                // If any social media authentication requests are made it redirects to authRoute.
 
 const port = process.env.PORT || 5500;
-const hostname = 'localhost';
+const hostname = 'localhost'; 
 
-const MONGO_USER = process.env.MONGO_USER
-const MONGO_PASS = process.env.MONGO_PASS 
+const ATLAS_URL = process.env.ATLAS_URL;
 
-const atlasUrl = `mongodb+srv://${MONGO_USER}:${MONGO_PASS}@cluster0.mkfhnjk.mongodb.net/zomato_project?retryWrites=true&w=majority`;
-
-mongoose.connect(atlasUrl,{useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect(ATLAS_URL,{useNewUrlParser: true, useUnifiedTopology: true})
 
 .then(res => {
     app.listen(port, hostname, () => {
