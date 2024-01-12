@@ -35,10 +35,10 @@ app.use('/auth', authRoute);                // If any social media authenticatio
 const port = process.env.PORT || 5500;
 const hostname = 'localhost';
 
-const monUser = process.env.MONGO_USER
-const pass = process.env.MONGO_PASS 
+const MONGO_USER = process.env.MONGO_USER
+const MONGO_PASS = process.env.MONGO_PASS 
 
-const atlasUrl = `mongodb+srv://${monUser}:${pass}@cluster0.mkfhnjk.mongodb.net/zomato_project?retryWrites=true&w=majority`;
+const atlasUrl = `mongodb+srv://${MONGO_USER}:${MONGO_PASS}@cluster0.mkfhnjk.mongodb.net/zomato_project?retryWrites=true&w=majority`;
 
 mongoose.connect(atlasUrl,{useNewUrlParser: true, useUnifiedTopology: true})
 
