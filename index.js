@@ -16,7 +16,7 @@ const authRoute = require('./Controllers/auth');          // Social Media Login 
 app.use(cookieSession({ name:"Session", keys:["edureka"], makAge: 24*60*60*1000 }));
 
 const corsOptions = {
-    origin:'http://localhost:3000', 
+    origin:'https://zomato-react-gamma.vercel.app', 
     credentials:true,            
     optionSuccessStatus:200
 }
