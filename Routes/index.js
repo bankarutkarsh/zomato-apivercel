@@ -6,6 +6,7 @@ const locationController = require('../Controllers/locations.js');
 const mealtypeController = require('../Controllers/mealtypes.js');
 const userController = require('../Controllers/users.js');
 const menuController = require('../Controllers/menus.js');
+const profileController = require('../Controllers/profile.js');
 
 const route = express.Router();
 route.get('/restaurants',restaurantController.getRestaurants);
@@ -17,5 +18,6 @@ route.post('/login',userController.login);
 route.get('/locations',locationController.getLocations);
 route.get('/mealtypes',mealtypeController.getMealtype);
 route.get('/menu/:askedId',menuController.getMenu);
+route.get('/profiles',profileController.getProfiles);
 
 module.exports = route;
